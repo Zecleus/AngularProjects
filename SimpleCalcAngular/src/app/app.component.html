@@ -1,0 +1,30 @@
+<body>
+
+<div [class.dark-mode] = "darkmode">
+<h1>Simple Calculator</h1>
+  <div class = "container .container-sm" id = "whole">
+    <div class="form-group">
+        <label>Number 1</label>
+        <input (input) = "getFirstNumber(firstNum.value)" class="form-control" id="FirstNumber" placeholder="Enter first number" #firstNum>
+    </div>
+
+    <div class="form-group">
+        <label>Number 2</label>
+        <input (input) = "getSecondNumber(secondNum.value)" class="form-control" id="SecondNumber" placeholder="Enter second number" #secondNum>
+    </div>
+
+  <div class = "form-group">
+      <button (click) = "additionButton()"  class="btn btn-dark" id = "add">+</button>
+      <button (click) = "subtractButton()" class="btn btn-dark" id = "subtract">-</button>
+      <button (click) = "multiplyButton()" class="btn btn-dark" id = "multiply">*</button>
+      <button (click) = "divideButton()" class="btn btn-dark" id = "divide">/</button>
+  </div>
+
+    <h2 id = "result">{{result}}</h2>
+
+    <button (click) = "toggleDarkMode()" type = "button" class="btn btn-dark" id = "themeToggle">Toggle Theme</button>
+
+  </div>
+</div>
+
+</body>
